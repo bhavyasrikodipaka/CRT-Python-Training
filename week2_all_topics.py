@@ -364,12 +364,161 @@
 # import math
 # print(math.lcm(6, 8))
 
-def gcd(a, b):
-    small = a
-    if b < small:
-        small = b
-    gcd = 1
-    for i in range(1, small + 1):
-        if a % i == 0 and b % i == 0:
-            gcd = i
-    return gcd
+#not completed lcm
+# def gcd(a, b):
+#     small = a
+#     if b < small:
+#         small = b
+#     gcd = 1
+#     for i in range(1, small + 1):
+#         if a % i == 0 and b % i == 0:
+#             gcd = i
+#     return gcd
+
+#LIST
+#RE-UPDATION
+# x = [5, 6, 7]
+# print(x + [5])
+# print(x)
+# x += [5]
+# print(x)
+#MODIFYING
+# x.append(9)
+# print(x)
+#POP FUNCTION based on index
+# x.pop()
+# print(x)
+#REMOVE FUNCTION based on value
+# x.remove(5)
+#REVERSE FUNCTION
+# x.reverse()
+# print(x)
+
+# SUM OF ARRAY ELEMENTS
+# x = [1, 2, 3, 4, 5]
+# sum = 0
+# for i in x:
+#     sum += i
+# print(sum)
+
+#MEMBERSHIP OPERATOR
+# x = "qwertyuiop"
+# print("a" in x)
+# print("a" not in x)
+
+#IDENTITY OPERATOR
+# x = 15
+# y = 16
+# print(x is y)
+# print(x is not y)
+
+#ODD INDEXED VALUES IN ARRAY
+# x = [1, 2, 3, 4, 5]
+# for i in range(len(x)):
+#     if i % 2 != 0:
+#         print(x[i])
+
+#CHECK WHETHER AN ARRAY IS SORTED #GeeksForGeeks
+# def is_sorted(arr):
+#     y = sorted(arr)
+#     return arr == y
+# arr = [10, 20, 30, 40]
+# print(is_sorted(arr))
+
+#another method
+# def isSorted(arr):
+#     for i in range(len(arr) - 1):
+#         if arr[i] > arr[i + 1]:
+#             return False
+#     return True
+# arr = [1, 2, 3, 4]
+# print(isSorted(arr))
+
+#REVERSE AN ARRAY
+#IN PLACE ROTATION TWO POINTER
+# def reverseArray(arr):
+#     left = 0
+#     right = len(arr) - 1
+#     while (left < right):
+#         arr[left], arr[right] = arr[right], arr[left]
+#         left += 1
+#         right -= 1
+#     return arr
+# arr = [1, 2, 3, 4]
+# print(reverseArray(arr))
+
+#LINEAR SEARCH
+# def search(arr, x):
+#     for i in range(len(arr)):
+#         if arr[i] == x:
+#             return i
+#     return -1
+# arr = [1, 2, 3, 4]
+# x = 3
+# print(search(arr, x))
+
+#FIND THE LARGEST ELEMENT
+# arr = [10, 20, 30, 40]
+# print(max(arr))
+
+#another method
+# arr = [1, 2, 3, 4]
+# largest = 0         #largest = arr[0] --> if negative values
+# for i in arr:
+#     if i > largest:
+#         largest = i
+# print(largest)
+
+#SECOND LARGEST ELEMENT IN AN ARRAY
+# def secondlargest(arr):
+#     largest = arr[0]
+#     for i in arr:
+#         if i > largest:
+#             largest = i
+#     largest_2 = -1
+#     for i in arr:
+#         if largest > i > largest_2:
+#             largest_2 = i
+#     return largest_2
+# arr = [1, 2, 1, 3, 4, 1]
+# print(secondlargest(arr))
+
+#MOVE ZEROES
+# def moveZeroes(nums):
+#     x = []
+#     y = []
+#     for i in nums:
+#         if i == 0:
+#             y.append(i)
+#         else:
+#             x.append(i)
+#     return x + y
+# nums = list(map(int, input().split()))
+# print(moveZeroes(nums))
+
+#MOVE ZEROES USING INPLACE #LeetCode #283
+# def moveZeroes(nums):
+#     idx = 0
+#     for i in nums:
+#         if i != 0:
+#             nums[idx] = i
+#             idx += 1
+#     for i in range(idx, len(nums)):
+#         nums[i] = 0
+#     return nums
+# nums = list(map(int, input().split()))
+# print(moveZeroes(nums))
+
+#MAX CONSECUTIVE ONES #LeetCode #485
+# def findMaxConsecutiveOnes(nums):
+#     c = 0
+#     mc = 0
+#     for i in nums:
+#         if i == 1:
+#             c += 1
+#         else:
+#             c = 0
+#         mc = max(mc, c)
+#     return mc
+# nums = list(map(int, input().split()))
+# print(findMaxConsecutiveOnes(nums))
